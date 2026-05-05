@@ -6,7 +6,6 @@
 <title>Muhammad Hassan Chaudhary — Portfolio</title>
 <link href="https://fonts.googleapis.com/css2?family=Syne:wght@700;800&family=DM+Sans:ital,wght@0,300;0,400;1,300&family=DM+Mono:wght@300;400&display=swap" rel="stylesheet">
 <style>
-/* ── Reset & Variables ───────────────────────────── */
 *{margin:0;padding:0;box-sizing:border-box}
 :root{
   --bg:#07070f;--s:#0f0f1a;--s2:#161624;
@@ -15,8 +14,6 @@
 }
 html{scroll-behavior:smooth}
 body{background:var(--bg);color:var(--t);font-family:'DM Sans',sans-serif;font-weight:300;overflow-x:hidden;line-height:1.7}
-
-/* ── Ambient bg ──────────────────────────────────── */
 body::before{
   content:'';position:fixed;inset:0;
   background-image:linear-gradient(rgba(127,255,212,.022) 1px,transparent 1px),
@@ -28,8 +25,6 @@ body::before{
 .b2{width:380px;height:380px;background:rgba(167,139,250,.055);bottom:80px;left:-100px;animation-delay:-10s}
 .b3{width:260px;height:260px;background:rgba(244,114,182,.04);top:40%;left:45%;animation-delay:-5s}
 @keyframes drift{to{transform:translate(35px,25px) scale(1.1)}}
-
-/* ── Nav ─────────────────────────────────────────── */
 nav{
   position:fixed;top:0;left:0;right:0;z-index:99;
   display:flex;justify-content:space-between;align-items:center;
@@ -41,11 +36,7 @@ nav{
 nav ul{list-style:none;display:flex;gap:34px}
 nav a{font-family:'DM Mono',monospace;font-size:.7rem;color:var(--m);text-decoration:none;letter-spacing:.1em;text-transform:uppercase;transition:color .3s}
 nav a:hover{color:var(--a)}
-
-/* ── Wrapper ─────────────────────────────────────── */
 .w{max-width:1080px;margin:0 auto;padding:0 40px;position:relative;z-index:1}
-
-/* ── Section chrome ──────────────────────────────── */
 .lbl{
   font-family:'DM Mono',monospace;font-size:.68rem;color:var(--a);
   letter-spacing:.16em;text-transform:uppercase;
@@ -53,8 +44,6 @@ nav a:hover{color:var(--a)}
 }
 .lbl::after{content:'';flex:0 0 55px;height:1px;background:var(--b)}
 h2{font-family:'Syne',sans-serif;font-size:clamp(1.9rem,4vw,2.9rem);font-weight:800;letter-spacing:-.025em;margin-bottom:52px;line-height:1.05}
-
-/* ── Hero ────────────────────────────────────────── */
 #hero{min-height:100vh;display:flex;align-items:center;padding-top:96px}
 .status-pill{
   display:inline-flex;align-items:center;gap:10px;
@@ -94,30 +83,6 @@ h1 .grad{
 }
 .btn-o:hover{border-color:var(--a);color:var(--a);transform:translateY(-3px)}
 @keyframes fadeUp{from{opacity:0;transform:translateY(30px)}to{opacity:1;transform:none}}
-
-/* ── Python badge ────────────────────────────────── */
-.py-badge{
-  position:absolute;right:0;top:50%;transform:translateY(-50%);
-  display:flex;flex-direction:column;align-items:center;gap:6px;
-  opacity:0;animation:fadeUp .9s .95s forwards;
-}
-.py-ring{
-  width:140px;height:140px;border-radius:50%;
-  border:1px solid var(--b);
-  display:flex;align-items:center;justify-content:center;
-  font-size:3.5rem;position:relative;
-  animation:spin 20s linear infinite;
-}
-.py-ring::before{
-  content:'';position:absolute;inset:-1px;border-radius:50%;
-  background:conic-gradient(var(--a),var(--a2),var(--a3),var(--a));
-  -webkit-mask:radial-gradient(farthest-side,transparent calc(100% - 1px),#fff 0);
-  mask:radial-gradient(farthest-side,transparent calc(100% - 1px),#fff 0);
-}
-@keyframes spin{to{transform:rotate(360deg)}}
-.py-label{font-family:'DM Mono',monospace;font-size:.65rem;color:var(--m);letter-spacing:.1em;text-transform:uppercase}
-
-/* ── About ───────────────────────────────────────── */
 #about{padding:100px 0;background:var(--s);border-top:1px solid var(--b);border-bottom:1px solid var(--b)}
 .about-grid{display:grid;grid-template-columns:1fr 1fr;gap:80px;align-items:center}
 .about-text{font-size:.97rem;color:var(--m);line-height:1.95}
@@ -127,8 +92,6 @@ h1 .grad{
 .stat:hover{border-color:rgba(127,255,212,.28);transform:translateY(-2px)}
 .stat-n{font-family:'Syne',sans-serif;font-size:2.4rem;font-weight:800;color:var(--a);line-height:1;margin-bottom:6px}
 .stat-l{font-family:'DM Mono',monospace;font-size:.66rem;color:var(--m);letter-spacing:.1em;text-transform:uppercase}
-
-/* ── Skills ──────────────────────────────────────── */
 #skills{padding:100px 0}
 .skill-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(265px,1fr));gap:2px}
 .skill-card{
@@ -151,8 +114,6 @@ h1 .grad{
   border-radius:2px;transition:all .2s;cursor:default;
 }
 .chip:hover{border-color:var(--a);color:var(--a)}
-
-/* ── Projects ────────────────────────────────────── */
 #projects{padding:100px 0;background:var(--s);border-top:1px solid var(--b);border-bottom:1px solid var(--b)}
 .proj-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(310px,1fr));gap:2px}
 .proj-card{
@@ -179,8 +140,6 @@ h1 .grad{
   border:1px solid rgba(127,255,212,.16);
   color:var(--a);border-radius:2px;
 }
-
-/* ── Experience ──────────────────────────────────── */
 #exp{padding:100px 0}
 .exp-row{
   display:grid;grid-template-columns:190px 1fr;gap:40px;
@@ -192,8 +151,6 @@ h1 .grad{
 .exp-list{list-style:none}
 .exp-list li{font-size:.88rem;color:var(--m);padding:5px 0 5px 20px;position:relative;line-height:1.75}
 .exp-list li::before{content:'→';position:absolute;left:0;color:var(--a);font-size:.78rem;top:6px}
-
-/* ── Education ───────────────────────────────────── */
 #edu{padding:100px 0;background:var(--s);border-top:1px solid var(--b)}
 .edu-card{
   background:var(--bg);border:1px solid var(--b);padding:48px;
@@ -204,8 +161,6 @@ h1 .grad{
 .edu-deg{font-family:'Syne',sans-serif;font-size:1.55rem;font-weight:800;margin-bottom:8px}
 .edu-sch{font-size:.92rem;color:var(--m);margin-bottom:20px}
 .edu-yr{font-family:'Syne',sans-serif;font-size:2.2rem;font-weight:800;color:var(--a);opacity:.32;white-space:nowrap}
-
-/* ── Certifications ──────────────────────────────── */
 #certs{padding:100px 0}
 .cert-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:2px}
 .cert-card{
@@ -216,8 +171,6 @@ h1 .grad{
 .cert-icon{font-size:1.4rem;flex-shrink:0}
 .cert-name{font-family:'Syne',sans-serif;font-size:.9rem;font-weight:700;margin-bottom:4px}
 .cert-issuer{font-family:'DM Mono',monospace;font-size:.66rem;color:var(--m)}
-
-/* ── Contact ─────────────────────────────────────── */
 #contact{padding:100px 0;text-align:center}
 .contact-big{font-family:'Syne',sans-serif;font-size:clamp(2.8rem,7vw,5.5rem);font-weight:800;line-height:.92;letter-spacing:-.035em;margin-bottom:22px}
 .contact-big .grad{
@@ -232,8 +185,6 @@ h1 .grad{
   border-radius:3px;display:flex;align-items:center;gap:10px;transition:all .3s;
 }
 .clink:hover{color:var(--a);border-color:var(--a);background:rgba(127,255,212,.04)}
-
-/* ── Footer ──────────────────────────────────────── */
 footer{
   border-top:1px solid var(--b);padding:28px 52px;
   display:flex;justify-content:space-between;align-items:center;
@@ -241,30 +192,23 @@ footer{
 }
 .f-name{font-family:'Syne',sans-serif;font-weight:800;font-size:.88rem;color:var(--a)}
 .f-note{font-family:'DM Mono',monospace;font-size:.66rem;color:var(--m)}
-
-/* ── Scroll reveal ───────────────────────────────── */
 .reveal{opacity:0;transform:translateY(24px);transition:opacity .75s ease,transform .75s ease}
 .reveal.vis{opacity:1;transform:none}
-
-/* ── Responsive ──────────────────────────────────── */
 @media(max-width:800px){
   nav{padding:14px 22px}nav ul{display:none}.w{padding:0 22px}
   .about-grid,.exp-row{grid-template-columns:1fr}
   .proj-card.feat{grid-column:span 1}
   .edu-card{grid-template-columns:1fr}
   footer{flex-direction:column;gap:10px;text-align:center;padding:24px}
-  .py-badge{display:none}
 }
 </style>
 </head>
 <body>
 
-<!-- Ambient blobs -->
 <div class="blob b1"></div>
 <div class="blob b2"></div>
 <div class="blob b3"></div>
 
-<!-- NAV -->
 <nav>
   <a href="#hero" class="logo">HCC</a>
   <ul>
@@ -276,9 +220,8 @@ footer{
   </ul>
 </nav>
 
-<!-- HERO -->
 <section id="hero">
-  <div class="w" style="position:relative">
+  <div class="w">
     <p class="status-pill">Open to internships &amp; entry-level roles</p>
     <h1>
       <span class="hi">Muhammad<br>Hassan<br></span>
@@ -289,213 +232,73 @@ footer{
       <a href="#projects" class="btn-p">View Projects</a>
       <a href="#contact" class="btn-o">Get in Touch</a>
     </div>
-
-    
-    
   </div>
 </section>
 
-<!-- ABOUT -->
 <section id="about">
   <div class="w">
     <p class="lbl reveal">About</p>
     <div class="about-grid">
       <div>
         <h2 class="reveal">Turning ideas<br>into intelligent<br>systems.</h2>
-        <p class="about-text reveal">I&#39;m a Computer Science graduate from COMSATS University Islamabad, Vehari Campus, passionate about AI, machine learning, and building software that solves real problems. Currently a Trainee at HKS Tech Labs, where I work on software modules and train real-world ML models alongside a collaborative team.</p>
+        <p class="about-text reveal">I'm a Computer Science graduate from <strong>COMSATS University Islamabad, Vehari Campus</strong>, passionate about AI, machine learning, and building software that solves real problems. Currently a <strong>Trainee at HKS Tech Labs</strong>, where I work on software modules and train real-world ML models alongside a collaborative team.</p>
       </div>
       <div class="stats reveal">
-        
-        <div class="stat">
-          <div class="stat-n">3+</div>
-          <div class="stat-l">Projects</div>
-        </div>
-        
-        <div class="stat">
-          <div class="stat-n">2</div>
-          <div class="stat-l">Certifications</div>
-        </div>
-        
-        <div class="stat">
-          <div class="stat-n">4+</div>
-          <div class="stat-l">Tech Stacks</div>
-        </div>
-        
-        <div class="stat">
-          <div class="stat-n">2026</div>
-          <div class="stat-l">Graduating</div>
-        </div>
-        
+        <div class="stat"><div class="stat-n">3+</div><div class="stat-l">Projects</div></div>
+        <div class="stat"><div class="stat-n">2</div><div class="stat-l">Certifications</div></div>
+        <div class="stat"><div class="stat-n">4+</div><div class="stat-l">Tech Stacks</div></div>
+        <div class="stat"><div class="stat-n">2026</div><div class="stat-l">Graduating</div></div>
       </div>
     </div>
   </div>
 </section>
 
-<!-- SKILLS -->
 <section id="skills">
   <div class="w">
     <p class="lbl reveal">Capabilities</p>
     <h2 class="reveal">Skills &amp; Tools</h2>
     <div class="skill-grid">
-      
-      <div class="skill-card reveal">
-        <div class="sk-icon">🐍</div>
-        <div class="sk-title">Languages</div>
-        <div class="chips">
-          
-          <span class="chip">Python</span>
-          
-          <span class="chip">HTML</span>
-          
-          <span class="chip">CSS</span>
-          
-        </div>
-      </div>
-      
-      <div class="skill-card reveal">
-        <div class="sk-icon">📱</div>
-        <div class="sk-title">Frontend &amp; Mobile</div>
-        <div class="chips">
-          
-          <span class="chip">React Native</span>
-          
-          <span class="chip">Responsive UI</span>
-          
-          <span class="chip">Navigation</span>
-          
-        </div>
-      </div>
-      
-      <div class="skill-card reveal">
-        <div class="sk-icon">🤖</div>
-        <div class="sk-title">ML &amp; Data Science</div>
-        <div class="chips">
-          
-          <span class="chip">Scikit-learn</span>
-          
-          <span class="chip">NumPy</span>
-          
-          <span class="chip">Pandas</span>
-          
-          <span class="chip">Matplotlib</span>
-          
-        </div>
-      </div>
-      
-      <div class="skill-card reveal">
-        <div class="sk-icon">🛠️</div>
-        <div class="sk-title">Tools &amp; Platforms</div>
-        <div class="chips">
-          
-          <span class="chip">VS Code</span>
-          
-          <span class="chip">Jupyter Notebook</span>
-          
-          <span class="chip">GitHub</span>
-          
-          <span class="chip">Pygame</span>
-          
-        </div>
-      </div>
-      
-      <div class="skill-card reveal">
-        <div class="sk-icon">🧠</div>
-        <div class="sk-title">CS Concepts</div>
-        <div class="chips">
-          
-          <span class="chip">OOP</span>
-          
-          <span class="chip">Algorithms</span>
-          
-          <span class="chip">Data Analysis</span>
-          
-          <span class="chip">Basic ML</span>
-          
-        </div>
-      </div>
-      
-      <div class="skill-card reveal">
-        <div class="sk-icon">🌐</div>
-        <div class="sk-title">Spoken Languages</div>
-        <div class="chips">
-          
-          <span class="chip">Urdu (Fluent)</span>
-          
-          <span class="chip">English (Intermediate)</span>
-          
-        </div>
-      </div>
-      
+      <div class="skill-card reveal"><div class="sk-icon">🐍</div><div class="sk-title">Languages</div><div class="chips"><span class="chip">Python</span><span class="chip">HTML</span><span class="chip">CSS</span></div></div>
+      <div class="skill-card reveal"><div class="sk-icon">📱</div><div class="sk-title">Frontend &amp; Mobile</div><div class="chips"><span class="chip">React Native</span><span class="chip">Responsive UI</span><span class="chip">Navigation</span></div></div>
+      <div class="skill-card reveal"><div class="sk-icon">🤖</div><div class="sk-title">ML &amp; Data Science</div><div class="chips"><span class="chip">Scikit-learn</span><span class="chip">NumPy</span><span class="chip">Pandas</span><span class="chip">Matplotlib</span></div></div>
+      <div class="skill-card reveal"><div class="sk-icon">🛠️</div><div class="sk-title">Tools &amp; Platforms</div><div class="chips"><span class="chip">VS Code</span><span class="chip">Jupyter Notebook</span><span class="chip">GitHub</span><span class="chip">Pygame</span></div></div>
+      <div class="skill-card reveal"><div class="sk-icon">🧠</div><div class="sk-title">CS Concepts</div><div class="chips"><span class="chip">OOP</span><span class="chip">Algorithms</span><span class="chip">Data Analysis</span><span class="chip">Basic ML</span></div></div>
+      <div class="skill-card reveal"><div class="sk-icon">🌐</div><div class="sk-title">Spoken Languages</div><div class="chips"><span class="chip">Urdu (Fluent)</span><span class="chip">English (Intermediate)</span></div></div>
     </div>
   </div>
 </section>
 
-<!-- PROJECTS -->
 <section id="projects">
   <div class="w">
     <p class="lbl reveal">Work</p>
     <h2 class="reveal">Selected Projects</h2>
     <div class="proj-grid">
-      
       <div class="proj-card reveal feat">
         <div class="proj-num">01 — Featured</div>
         <div class="proj-title">AI-Based Sudoku Solver</div>
         <div class="proj-desc">Interactive GUI-based Sudoku game with real-time visual feedback and solving animation. Implements a backtracking algorithm for efficient puzzle solving with user input validation and animated step-by-step solve.</div>
-        <div class="badges">
-          
-          <span class="badge">Python</span>
-          
-          <span class="badge">Pygame</span>
-          
-          <span class="badge">Backtracking Algorithm</span>
-          
-          <span class="badge">GUI</span>
-          
-        </div>
+        <div class="badges"><span class="badge">Python</span><span class="badge">Pygame</span><span class="badge">Backtracking Algorithm</span><span class="badge">GUI</span></div>
       </div>
-      
-      <div class="proj-card reveal ">
+      <div class="proj-card reveal">
         <div class="proj-num">02</div>
         <div class="proj-title">Linear Regression Model</div>
         <div class="proj-desc">Predictive model built on an advertising dataset covering end-to-end data cleaning, preprocessing, exploratory visualization, and regression — achieving strong accuracy after strategic dataset expansion.</div>
-        <div class="badges">
-          
-          <span class="badge">Python</span>
-          
-          <span class="badge">Scikit-learn</span>
-          
-          <span class="badge">Pandas</span>
-          
-          <span class="badge">Matplotlib</span>
-          
-        </div>
+        <div class="badges"><span class="badge">Python</span><span class="badge">Scikit-learn</span><span class="badge">Pandas</span><span class="badge">Matplotlib</span></div>
       </div>
-      
-      <div class="proj-card reveal ">
+      <div class="proj-card reveal">
         <div class="proj-num">03</div>
         <div class="proj-title">Fitness Tracking App</div>
         <div class="proj-desc">Cross-platform mobile app for workout tracking with responsive UI, multi-screen navigation, and workout logging. Currently adding dark mode and personalized user preferences.</div>
-        <div class="badges">
-          
-          <span class="badge">React Native</span>
-          
-          <span class="badge">Cross-Platform</span>
-          
-          <span class="badge">UI/UX</span>
-          
-        </div>
+        <div class="badges"><span class="badge">React Native</span><span class="badge">Cross-Platform</span><span class="badge">UI/UX</span></div>
       </div>
-      
     </div>
   </div>
 </section>
 
-<!-- EXPERIENCE -->
 <section id="exp">
   <div class="w">
     <p class="lbl reveal">Career</p>
     <h2 class="reveal">Experience</h2>
-    
     <div class="exp-row reveal">
       <div>
         <div class="exp-date">05/2025 – 12/2026</div>
@@ -504,94 +307,58 @@ footer{
       <div>
         <div class="exp-role">Trainee — Software &amp; ML</div>
         <ul class="exp-list">
-          
           <li>Developed small-scale software modules as part of a collaborative team.</li>
-          
           <li>Supported ongoing projects and consistently met development milestones.</li>
-          
           <li>Trained and evaluated Machine Learning models in real-world scenarios.</li>
-          
         </ul>
       </div>
     </div>
-    
   </div>
 </section>
 
-<!-- EDUCATION -->
 <section id="edu">
   <div class="w">
     <p class="lbl reveal">Background</p>
     <h2 class="reveal">Education</h2>
-    
     <div class="edu-card reveal">
       <div>
         <div class="edu-deg">B.S. Computer Science</div>
         <div class="edu-sch">COMSATS University Islamabad, Vehari Campus — Feb 2022 – 2026</div>
         <div class="chips">
-          
-          <span class="chip">Database Systems</span>
-          
-          <span class="chip">Artificial Intelligence</span>
-          
-          <span class="chip">Machine Learning</span>
-          
-          <span class="chip">Software Engineering</span>
-          
+          <span class="chip">Database Systems</span><span class="chip">Artificial Intelligence</span><span class="chip">Machine Learning</span><span class="chip">Software Engineering</span>
         </div>
       </div>
       <div class="edu-yr">2026</div>
     </div>
-    
   </div>
 </section>
 
-<!-- CERTIFICATIONS -->
 <section id="certs">
   <div class="w">
     <p class="lbl reveal">Credentials</p>
     <h2 class="reveal">Certifications</h2>
     <div class="cert-grid">
-      
-      <div class="cert-card reveal">
-        <div class="cert-icon">🐍</div>
-        <div>
-          <div class="cert-name">Introduction to Python</div>
-          <div class="cert-issuer">Coursera</div>
-        </div>
-      </div>
-      
-      <div class="cert-card reveal">
-        <div class="cert-icon">🤖</div>
-        <div>
-          <div class="cert-name">Machine Learning Crash Course</div>
-          <div class="cert-issuer">Google Developers</div>
-        </div>
-      </div>
-      
+      <div class="cert-card reveal"><div class="cert-icon">🐍</div><div><div class="cert-name">Introduction to Python</div><div class="cert-issuer">Coursera</div></div></div>
+      <div class="cert-card reveal"><div class="cert-icon">🤖</div><div><div class="cert-name">Machine Learning Crash Course</div><div class="cert-issuer">Google Developers</div></div></div>
     </div>
   </div>
 </section>
 
-<!-- CONTACT -->
 <section id="contact">
   <div class="w">
-    <div class="contact-big reveal">
-      Let's<br><span class="grad">Work Together</span>
-    </div>
+    <div class="contact-big reveal">Let's<br><span class="grad">Work Together</span></div>
     <p class="contact-sub reveal">Looking for internships &amp; entry-level roles in AI, ML &amp; software development.</p>
     <div class="contact-links reveal">
       <a href="mailto:chmhassan678@gmail.com" class="clink">✉ chmhassan678@gmail.com</a>
-      <a href="tel:+92 304 5204740" class="clink">📞 +92 304 5204740</a>
+      <a href="tel:+923045204740" class="clink">📞 +92 304 5204740</a>
       <a href="https://linkedin.com/in/hassan-ch-b301353b8" target="_blank" class="clink">💼 LinkedIn Profile</a>
     </div>
   </div>
 </section>
 
-<!-- FOOTER -->
 <footer>
   <span class="f-name">Muhammad Hassan Chaudhary</span>
-  <span class="f-note">Built with Python &amp; Flask · Vehari, Pakistan</span>
+  <span class="f-note">Vehari, Pakistan</span>
 </footer>
 
 <script>
